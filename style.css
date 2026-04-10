@@ -100,7 +100,9 @@ header nav {
 }
 
 .logo img {
-    height: 45px;
+    height: 85px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
