@@ -1,0 +1,11 @@
+# Build artifacts
+rainbow-mst-kr.zip
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other
+.idea/
+.vscode/
+node_modules/
