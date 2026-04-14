@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Korea Business Card Mockup</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-card: #ffffff;
+            --rainbow-red: #e11d48;
+            --rainbow-orange: #f59e0b;
+            --rainbow-yellow: #facc15;
+            --rainbow-green: #22c55e;
+            --rainbow-purple: #9333ea;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .card {
+            width: 900px; /* 90mm * 10 (scale) */
+            height: 500px; /* 50mm * 10 (scale) */
+            background: var(--bg-card);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 60px;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Front Styling */
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .logo-text {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span:nth-child(1) { color: var(--rainbow-red); }
+        .logo-text span:nth-child(2) { color: var(--rainbow-orange); }
+        .logo-text span:nth-child(3) { color: var(--text-main); } /* Space */
+        .logo-text span:nth-child(4) { color: var(--rainbow-purple); }
+        .logo-text span:nth-child(5) { color: var(--text-main); }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 500;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 8px;
+            margin-top: 5px;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .personal-info {
+            margin-top: auto;
+        }
+
+        .name-group {
+            margin-bottom: 25px;
+        }
+
+        .name-en {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-right: 15px;
+        }
+
+        .name-kr {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .title {
+            font-size: 18px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 30px;
+            font-size: 18px;
+            color: var(--text-main);
+        }
+
+        .contact-label {
+            color: var(--primary);
+            font-weight: 700;
+            width: 25px;
+        }
+
+        .qr-code {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            width: 120px;
+            height: 120px;
+            border: 1px solid #e2e8f0;
+            padding: 5px;
+            background: white;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Back Styling */
+        .back-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .business-scope {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .scope-item {
+            font-size: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scope-item::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .address-area {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .addr-block {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .addr-block strong {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .web-url {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .hint {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <p class="hint">Front Side (앞면)</p>
+    <div class="card" id="front-card">
+        <div class="logo-area">
+            <div class="logo-text">
+                <span>R</span><span>a</span>inbow <span>K</span><span>o</span>rea
+            </div>
+            <div class="tagline">Material Solution Technology</div>
+        </div>
+
+        <div class="personal-info">
+            <div class="name-group">
+                <span class="name-en">David Jung</span>
+                <span class="name-kr">정구욱</span>
+                <span class="title">CEO</span>
+            </div>
+            <div class="contact-details">
+                <div><span class="contact-label">M</span> +82 10 4661 8571</div>
+                <div><span class="contact-label">E</span> rainbow@rbmst.co.kr</div>
+            </div>
+        </div>
+
+        <div class="qr-code">
+            <img src="../../website_qr.png" alt="QR Code">
+        </div>
+    </div>
+
+    <p class="hint" style="margin-top: 40px;">Back Side (뒷면)</p>
+    <div class="card" id="back-card">
+        <div class="back-content">
+            <div class="logo-area" style="opacity: 0.5;">
+                <div class="logo-text" style="font-size: 24px;">
+                    Rainbow Korea
+                </div>
+            </div>
+
+            <div class="business-scope">
+                <div class="scope-item"><strong>PCB & Semiconductor</strong> Solutions</div>
+                <div class="scope-item"><strong>MRO & Parts</strong> Supply Service</div>
+                <div class="scope-item"><strong>AI Agent</strong> & IT Platforms</div>
+                <div class="scope-item"><strong>Future Tech</strong> Education</div>
+                <div class="scope-item"><strong>Specialized Security</strong> & Care</div>
+            </div>
+
+            <div class="address-area">
+                <div class="addr-block">
+                    <strong>KOREA</strong> 1F 1239, Dongseo-daero, Jung-gu, Daejeon, Korea
+                </div>
+                <div class="addr-block">
+                    <strong>TAIWAN</strong> 9F., No.218, Yuanhua Rd., Zhongli Dist., Taoyuan City 320675, Taiwan (R.O.C)
+                </div>
+                <div class="web-url">www.rbmst.co.kr</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
