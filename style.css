@@ -647,100 +647,40 @@ header:not(.scrolled) .nav-links a:not(.btn-primary) {
 }
 
 .info-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     margin-top: 2rem;
 }
 
-.contact-card {
-    background: var(--white);
-    border: 1px solid #edf2f7;
-    border-radius: 20px;
-    padding: 2rem;
-    transition: var(--transition);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-    border-bottom: 2px solid var(--bg-light);
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.card-header h4 {
-    font-size: 1.35rem;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.kr-name {
+.contact-group h4 {
     font-size: 1.1rem;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-.role {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    font-weight: 700;
-    margin-top: 0.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 0.5rem;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    color: var(--text-main);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .info-item i {
     color: var(--primary);
-    flex-shrink: 0;
 }
 
-.card-body .info-item a {
+.info-item a {
     text-decoration: none;
     color: var(--text-main);
-    font-weight: 600;
+    font-weight: 500;
     transition: var(--transition);
 }
 
-.card-body .info-item a:hover {
+.info-item a:hover {
     color: var(--primary);
     text-decoration: underline;
-}
-
-.global-office {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--bg-light);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.global-office .info-item span {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.6;
 }
 
 .contact-form {
