@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rbmst.co.kr/sitemap.xml
