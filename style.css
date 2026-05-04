@@ -1,3 +1,10 @@
+/* AOS 애니메이션 가시성 강제 (Emergency Visibility Fix) */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
 :root {
     /* Color Palette - Premium Blue & Green */
     --primary: #0056b3;

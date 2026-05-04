@@ -2,13 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lucide Icons 초기화
     lucide.createIcons();
 
-    // AOS 애니메이션 초기화
+    /* AOS 애니메이션 초기화 (비가시성 문제로 일시 중단)
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
         once: false,
         mirror: true
     });
+    */
 
     // 스크롤 시 헤더 스타일 변경
     const header = document.getElementById('header');
