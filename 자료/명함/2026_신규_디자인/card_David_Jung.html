@@ -194,6 +194,61 @@
             font-size: 14px;
             color: var(--text-muted);
         }
+
+        @media print {
+            @page { 
+                size: 90mm 50mm; 
+                margin: 0; 
+            }
+            body { 
+                margin: 0; 
+                padding: 0; 
+                background: #fff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .hint { display: none; }
+            .card { 
+                width: 90mm !important; 
+                height: 50mm !important;
+                padding: 6mm !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+                page-break-after: always;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                box-sizing: border-box !important;
+            }
+            
+            .logo-text { font-size: 14pt !important; }
+            .logo-text span.korea { margin-left: 1mm !important; }
+            .tagline { font-size: 5pt !important; padding-top: 1mm !important; margin-top: 1mm !important; }
+            
+            .name-group { margin-bottom: 2mm !important; }
+            .name-en { font-size: 12pt !important; margin-right: 2mm !important; }
+            .name-kr { font-size: 8pt !important; }
+            .title { font-size: 7pt !important; margin-top: 1mm !important; }
+            
+            .contact-details { font-size: 7pt !important; gap: 1mm 3mm !important; }
+            .contact-label { width: 3mm !important; }
+            
+            .qr-code { 
+                width: 15mm !important; 
+                height: 15mm !important; 
+                bottom: 6mm !important; 
+                right: 6mm !important; 
+                padding: 1mm !important;
+            }
+
+            .back-content { gap: 4mm !important; }
+            .business-scope { gap: 2mm !important; }
+            .scope-item { font-size: 6pt !important; gap: 1.5mm !important; }
+            .address-area { padding-top: 3mm !important; gap: 1.5mm !important; }
+            .addr-block { font-size: 5.5pt !important; }
+            .web-url { font-size: 7pt !important; margin-top: 1.5mm !important; }
+        }
     </style>
 </head>
 <body>
@@ -214,7 +269,7 @@
             </div>
             <div class="contact-details">
                 <div><span class="contact-label">M</span> +82 10 4661 8571</div>
-                <div><span class="contact-label">E</span> rainbow@rbmst.co.kr / jgw2105@gmail.com</div>
+                <div><span class="contact-label">E</span> jgw2105@gmail.com</div>
             </div>
         </div>
 
